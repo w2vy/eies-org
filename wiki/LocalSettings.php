@@ -143,3 +143,5 @@ wfLoadSkin( 'Vector' );
 $wgGroupPermissions['*']['edit'] = false;
 $wgGroupPermissions['*']['createaccount'] = false;
 
+$wgShowExceptionDetails = true;
+
