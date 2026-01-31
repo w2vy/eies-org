@@ -34,7 +34,7 @@ $wgScriptPath = "";
 #$wgArticlePath = "/wiki/$1";     // common clean URL
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "http://home21.localdomain:34371";
+$wgServer = "https://WikiWorld.com";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
