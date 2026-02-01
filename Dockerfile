@@ -62,8 +62,8 @@ RUN mkdir -p /var/www/html/images \
     && mkdir -p /var/run/apache2 \
     && mkdir -p /var/log/supervisor
 
-# Expose ports: 80 (landing), 8080 (wiki)
-EXPOSE 80 8080
+# Expose ports: 80 (eies.org), 81 (whitescarver.com), 8080 (wikiworld.com)
+EXPOSE 80 81 8080
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]

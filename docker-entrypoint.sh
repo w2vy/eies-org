@@ -46,9 +46,10 @@ EOSQL
     echo "MySQL initialization complete."
 fi
 
-# Generate LocalSettings.php from template (update DB server to localhost)
+# Generate LocalSettings.php from template
 if [ -f "/var/www/html/LocalSettings.php.template" ]; then
-    sed 's/\$wgDBserver = "db";/\$wgDBserver = "localhost";/' \
+    sed -e 's/\$wgDBserver = "db";/\$wgDBserver = "localhost";/' \
+        -e 's|\$wgServer = "https://WikiWorld.com";|\$wgServer = "http://wikiworld.com";|' \
         /var/www/html/LocalSettings.php.template > /var/www/html/LocalSettings.php
     chown www-data:www-data /var/www/html/LocalSettings.php
 fi
