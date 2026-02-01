@@ -37,8 +37,9 @@ RUN sed -i 's/Listen 80/Listen 8080/' /etc/apache2/ports.conf \
 RUN rm /etc/nginx/sites-enabled/default
 COPY nginx-landing.conf /etc/nginx/sites-enabled/landing.conf
 
-# Copy landing page
-COPY eies.org/ /var/www/landing/
+# Copy landing pages
+COPY eies.org/ /var/www/eies.org/
+COPY whitescarver.com/ /var/www/whitescarver.com/
 
 # Copy MediaWiki config (will be modified by entrypoint)
 COPY wiki/LocalSettings.php /var/www/html/LocalSettings.php.template
