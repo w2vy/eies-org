@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y \
     diffutils \
     supervisor \
     curl \
+    vim \
     && rm -rf /var/lib/apt/lists/*
 
 # Download and extract MediaWiki
@@ -41,8 +42,8 @@ COPY nginx-landing.conf /etc/nginx/sites-enabled/landing.conf
 COPY eies.org/ /var/www/eies.org/
 COPY whitescarver.com/ /var/www/whitescarver.com/
 
-# Copy MediaWiki config (will be modified by entrypoint)
-COPY wiki/LocalSettings.php /var/www/html/LocalSettings.php.template
+# Copy MediaWiki config
+COPY wiki/LocalSettings.php /var/www/html/LocalSettings.php
 
 # Copy database init script
 COPY db/mwnew.sql /docker-entrypoint-initdb.d/mwnew.sql

@@ -33,7 +33,7 @@ docker exec -it <container_id> bash
 | External (Flux) | Internal | Site |
 |-----------------|----------|------|
 | 34370 | 80 | eies.org (nginx) |
-| 34371 | 8080 | wikiworld.com (Apache/MediaWiki) |
+| 34371 | 8080 | www.wikiworld.com (Apache/MediaWiki) |
 | 34372 | 81 | whitescarver.com (nginx) |
 
 ## Architecture

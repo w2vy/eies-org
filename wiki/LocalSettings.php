@@ -34,7 +34,7 @@ $wgScriptPath = "";
 #$wgArticlePath = "/wiki/$1";     // common clean URL
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "https://WikiWorld.com";
+$wgServer = "https://www.wikiworld.com";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
@@ -60,7 +60,7 @@ $wgEmailAuthentication = true;
 
 ## Database settings
 $wgDBtype = "mysql";
-$wgDBserver = "db";
+$wgDBserver = "localhost";
 $wgDBname = "mwnew";
 $wgDBuser = "mediawiki";
 $wgDBpassword = "nouseme";
