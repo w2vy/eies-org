@@ -55,10 +55,10 @@ docker exec -it <container_id> bash
 ## Key Files
 
 - `Dockerfile` - All-in-one container build
-- `docker-entrypoint.sh` - Database initialization and config generation
+- `docker-entrypoint.sh` - Database initialization on first run
 - `supervisord.conf` - Process management (mysql, apache, nginx)
-- `nginx-landing.conf` - Nginx virtual host configuration
-- `wiki/LocalSettings.php` - MediaWiki configuration template
+- `nginx-landing.conf` - Nginx port-based configuration (port 80 and 81)
+- `wiki/LocalSettings.php` - MediaWiki configuration
 - `db/mwnew.sql` - Database initialization script
 
 ## MediaWiki Configuration
